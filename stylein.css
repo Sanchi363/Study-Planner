@@ -1,0 +1,205 @@
+:root {
+  --light-bg: rgb(245, 245, 240);       
+  --mid-bg: rgb(230, 216, 195);         
+  --accent-bg: rgb(194, 166, 140);     
+  --dark-accent: rgb(93, 134, 108);     
+  --overdue-accent: rgb(134, 104, 84);  
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.container {
+  width: 420px;
+  background: var(--mid-bg);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  overflow: hidden;
+}
+
+#head-text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--dark-accent);
+}
+
+#newtask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+#newtask input[type="text"],
+#newtask input[type="datetime-local"] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border: 2px solid var(--accent-bg);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--light-bg);
+  color: #333;
+}
+
+#newtask input[type="datetime-local"] {
+  width: 180px;
+  font-size: 13px;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-color: var(--dark-accent);
+}
+
+#newtask button {
+  background: var(--dark-accent);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.15s;
+  white-space: nowrap;
+}
+
+#newtask button:hover {
+  background: #4c7a63;
+}
+
+/* Stats */
+.stats {
+  font-size: 13px;
+  color: var(--dark-accent);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.stats p {
+  margin: 0;
+}
+
+.progressWrap {
+  flex: 1;
+  width: 100%;
+  background: var(--accent-bg);
+  border-radius: 10px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  width: 0%;
+  background: var(--dark-accent);
+  transition: width 0.3s ease;
+}
+
+/* Task list */
+.tasks {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-top: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid var(--accent-bg);
+  background: var(--light-bg);
+}
+
+.task.overdue {
+  border-left: 4px solid var(--overdue-accent);
+  background: #f9f4f0;
+}
+
+.task.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.task .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.task .left .title {
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--dark-accent);
+}
+
+.task .left .meta {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.task .left input[type="checkbox"] {
+  accent-color: var(--dark-accent);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.actions button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.actions .delete {
+  color: var(--overdue-accent);
+}
+
+.actions .edit {
+  color: var(--dark-accent);
+}
+
+.actions .complete {
+  color: var(--dark-accent);
+}
+
+.empty {
+  padding: 14px;
+  text-align: center;
+  color: #9ca3af;
+  border-radius: 6px;
+  border: 1px dashed var(--accent-bg);
+  background: var(--light-bg);
+}

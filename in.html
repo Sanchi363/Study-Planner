@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task List</title>
+  <link rel="stylesheet" href="stylein.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+  <div class="container">
+    <h1 id="head-text">📋 Task List</h1>
+
+    <div id="newtask">
+      <input type="text" placeholder="Add a task" id="taskInput" />
+      <input type="datetime-local" id="dueDateInput" />
+      <button id="push">Add</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <p>Total: <span id="totalTasks">0</span></p>
+      <p>Completed: <span id="doneTasks">0</span></p>
+      <div class="progressWrap">
+        <div id="progressBar" class="progressBar"></div>
+      </div>
+    </div>
+
+    <ul class="tasks" id="taskList"></ul>
+  </div>
+
+  <script src="scriptin.js"></script>
+</body>
+</html>
