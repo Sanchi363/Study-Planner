@@ -1,9 +1,9 @@
 :root {
-  --light-bg: rgb(245, 245, 240);       
-  --mid-bg: rgb(230, 216, 195);         
-  --accent-bg: rgb(194, 166, 140);     
-  --dark-accent: rgb(93, 134, 108);     
-  --overdue-accent: rgb(134, 104, 84);  
+  --light-bg: rgb(245, 245, 240);       /* soft background */
+  --mid-bg: rgb(230, 216, 195);         /* container background */
+  --accent-bg: rgb(194, 166, 140);      /* warm brown */
+  --dark-accent: rgb(93, 134, 108);     /* deep green */
+  --overdue-accent: rgb(134, 104, 84);  /* muted brown for overdue */
 }
 
 * {
@@ -195,6 +195,7 @@ body {
   color: var(--dark-accent);
 }
 
+/* empty message */
 .empty {
   padding: 14px;
   text-align: center;
