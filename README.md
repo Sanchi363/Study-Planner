@@ -20,4 +20,3 @@ A simple frontend web application to help students plan, organize, and track the
 
 ---
 
-## 📂 Project Structure
